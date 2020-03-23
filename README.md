@@ -1,3 +1,3 @@
 # rabbitmq-njs
 
-Package pour utiliser RabbitMQ en NodeJS
+Provide functions for RabbitMQ processes based on amqplib connection
