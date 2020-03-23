@@ -1,6 +1,6 @@
 {
   "name": "@agena3000/rabbitmq-njs",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Provide functions for RabbitMQ processes based on amqplib connection",
   "main": "index.js",
   "scripts": {

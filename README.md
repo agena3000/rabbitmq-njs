@@ -14,11 +14,7 @@ var queue = 'test-queue'
 amqp
 .connect("amqp://admin:admin@rabbitmq.host")
 .then(conn => a3rmq
-  .publish(conn, queue, JSON.stringify({
-    item: "test",
-    id: 2,
-    array: [ "el1", "el2" ]
-  }))
+  .publish(conn, queue, "message"))
 )
 .catch(console.warn)
  
@@ -27,7 +23,7 @@ amqp
 .connect("amqp://admin:admin@rabbitmq.host")
 .then(conn => a3rmq
   .consume(conn, queue, msg => {
-      console.log(JSON.parse(msg.content.toString()))
+      console.log(msg.content.toString())
   })
   .catch(console.warn)
 )
