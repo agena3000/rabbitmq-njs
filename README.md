@@ -12,7 +12,7 @@ var queue = 'test-queue'
  
 // Publisher
 amqp
-.connect("amqp://admin:admin@docker.agena3000.com:50020")
+.connect("amqp://admin:admin@rabbitmq.host")
 .then(conn => a3rmq
   .publish(conn, queue, JSON.stringify({
     item: "test",
@@ -24,7 +24,7 @@ amqp
  
 // Consumer
 amqp
-.connect("amqp://admin:admin@docker.agena3000.com:50020")
+.connect("amqp://admin:admin@rabbitmq.host")
 .then(conn => a3rmq
   .consume(conn, queue, msg => {
       console.log(JSON.parse(msg.content.toString()))
