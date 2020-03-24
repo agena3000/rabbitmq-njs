@@ -1,22 +1,5 @@
-exports.publish = (connection, queue, message) => connection
-    .createChannel()
-    .then(ch => ch
-        .assertQueue(queue)
-        .then(() => ch.sendToQueue(queue, Buffer.from(message)))
-    )
-
-exports.consume = (connection, queue, callbackIfMessage, callbackIfNoMessage) => connection
-    .createChannel()
-    .then(ch => ch
-        .assertQueue(queue)
-        .then(() => ch
-            .consume(queue, (msg) => {
-                if (msg !== null) {
-                    callbackIfMessage(msg)
-                    ch.ack(msg)
-                } else {
-                    callbackIfNoMessage()
-                }
-            })
-        )
-    )
+exports.publish = require('./publish').publish
+exports.consume = require('./consume').consume
+exports.rpcServer = require('./rpc').server
+exports.rpcClient = require('./rpc').client
+exports.connect = require('./connect').connect

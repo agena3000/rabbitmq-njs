@@ -1,14 +1,11 @@
 {
   "name": "@agena3000/rabbitmq-njs",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Provide functions for RabbitMQ processes based on amqplib connection",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
-    "url": "https://gitlab.agena3000.com/common/rabbitmq-njs"
+    "url": "https://github.com/agena3000/rabbitmq-njs"
   },
   "keywords": [
     "RabbitMQ",
@@ -16,5 +13,8 @@
     "amqplib"
   ],
   "author": "Teddy Graveleau <teddy.graveleau@orange.fr>",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.5.5"
+  }
 }
