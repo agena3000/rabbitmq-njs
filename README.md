@@ -1,6 +1,6 @@
 # rabbitmq-njs
 
-Provide functions for RabbitMQ processes based on amqplib connection.
+Provide NodeJS functions for RabbitMQ processes based on amqplib connection.
 
 https://www.npmjs.com/package/@agena3000/rabbitmq-njs
 
